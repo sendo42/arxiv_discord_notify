@@ -1,0 +1,6 @@
+{
+    "name": "Docker Django arXiv api",
+    "build": {
+        "dockerfile": "../Dockerfile"
+    }
+}
