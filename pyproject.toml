@@ -1,0 +1,11 @@
+[project]
+name = "Django"
+version = "0.1.0"
+description = "Django"
+dependencies = [
+    "Django==5.2.15",
+    "asgiref==3.11.1",
+    "sqlparse==0.5.5",
+    "typing_extensions==4.16.0",
+    "arxiv==4.0.0"
+]
