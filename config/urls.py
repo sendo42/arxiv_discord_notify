@@ -20,7 +20,7 @@ from django.urls import path
 
 
 def index(request):
-    return JsonResponse({"message": "こんにちは Django"})
+    return JsonResponse({"message": "こんにちは test Django"})
 
 
 def health(request):
