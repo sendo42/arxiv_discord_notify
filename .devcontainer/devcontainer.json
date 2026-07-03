@@ -2,5 +2,15 @@
     "name": "Docker Django arXiv api",
     "build": {
         "dockerfile": "../Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "charliermarsh.ruff",
+                "github.vscode-pull-request-github",
+                "batisteo.vscode-django"
+            ]
+        }
     }
 }
