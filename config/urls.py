@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.http import JsonResponse
 from django.urls import path
+import arxiv
 
 
 def index(request):
@@ -26,9 +27,31 @@ def index(request):
 def health(request):
     return JsonResponse({"status": "ok"})
 
+def paper(request):
+    client = arxiv.Client(delay_seconds=3.0)
+
+    search = arxiv.Search(
+        query = "Bosonization",
+        max_results = 100,
+        sort_by = arxiv.SortCriterion.SubmittedDate
+    )
+
+    results = client.results(search)
+
+    data = []
+
+    for paper in results:
+        data.append({
+            "title": paper.title,
+            "author": [author.name for author in paper.authors],
+            "summary": paper.summary
+        })
+
+    return JsonResponse(data=data, safe=False)
 
 urlpatterns = [
     path("", index),
     path("health/", health),
     path("admin/", admin.site.urls),
+    path("paper/", paper),
 ]
