@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 asgiref==3.11.1
 Django==5.2.15
 sqlparse==0.5.5
 typing_extensions==4.16.0
 arxiv==4.0.0
+=======
+asgiref==3.11.1
+Django==5.2.15
+sqlparse==0.5.5
+typing_extensions==4.16.0
+arxiv==4.0.0
+>>>>>>> 4f1487d (requirements.txtにarxivライブラリを追加)
